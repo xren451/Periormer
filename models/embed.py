@@ -57,21 +57,44 @@ class FixedEmbedding(nn.Module):
         return self.emb(x).detach()
 
 class PeriodicEmbedding(nn.Module):
+    ####Periodic embedding,Periodic Amplitude Embedding (PAE)
+    # --->summation of all periodic terms for all variables.
+
     #Mimicry positional embedding rather than fixed embedding.
     def __init__(self, d_model,max_len=5000):
         super(PeriodicEmbedding, self).__init__()
         import numpy as np
+        import torch
         pe = torch.zeros(max_len, d_model).float()  # pe:max len*d_model=5000*512
         pe.require_grad = False
 
         position = torch.arange(0, max_len).float().unsqueeze(1)  # integer: 1-5000;
         div_term = (torch.arange(0, d_model, 2).float() * -(math.log(10000.0) / d_model)).exp()  # 256
         outputFFT = torch.load("./outputFFT.pt")
-        pe[:, 0::2] = torch.sin(position * div_term)
-        pe[:, 1::2] = torch.cos(position * div_term)
+       # print(outputFFT[:,0,0].shape)
+        sum_sin = []
+        for m in range(outputFFT.size(0)):
+            for n in range(outputFFT.size(1)):
+                sum_sin.append(outputFFT[m, n, 0] * torch.sin(2 * math.pi * position * div_term / (outputFFT[m, n, 1])))
+        #print(sum_sin[0].shape)
+        all_sin = torch.zeros(max_len, int(d_model * 0.5)).float()
+        all_sin.shape
+        for i in range(len(sum_sin)):
+            all_sin = sum_sin[i] + all_sin
+        #print(all_sin.shape)
+        pe[:, 0::2] = all_sin
 
-        pe = pe.unsqueeze(0)  # PE:5000*512
-        self.register_buffer('pe', pe)
+        sum_cos = []
+        for m in range(outputFFT.size(0)):
+            for n in range(outputFFT.size(1)):
+                sum_cos.append(outputFFT[m, n, 0] * torch.cos(2 * math.pi * position * div_term / (outputFFT[m, n, 1])))
+        #print(sum_cos[0].shape)
+        all_cos = torch.zeros(max_len, int(d_model * 0.5)).float()
+        all_cos.shape
+        for i in range(len(sum_cos)):
+            all_cos = sum_cos[i] + all_cos
+        #print(all_cos.shape)
+        pe[:, 0::2] = all_cos
 
         # outputFFT = torch.load("./outputFFT.pt")
         # c_in_0 = torch.tensor(c_in).reshape(-1)
@@ -87,6 +110,9 @@ class PeriodicEmbedding(nn.Module):
         # output_0 = torch.tensor(output_0)
         # output_0 = output_0.sum(dim=1)
         # output_0.shape
+
+        pe = pe.unsqueeze(0)  # PE:5000*512
+        self.register_buffer('pe', pe)
 
     def forward(self, x):
         # import numpy as np
@@ -105,8 +131,6 @@ class PeriodicEmbedding(nn.Module):
         # output_0.shape
         # x=output_0
         return self.pe[:, :x.size(1)]
-
-
 
 class TemporalEmbedding(nn.Module):
     def __init__(self, d_model, embed_type='fixed', freq='h'):
