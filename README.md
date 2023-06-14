@@ -8,3 +8,6 @@ We design CDE-Periormer structure to handle irregular sampling rate and periodic
 
 Also, the periodic attention is shown in the following figure.
 ![4 periatt](https://github.com/xren451/CDE-Periormer/blob/main/img/periodic%20att.png)
+
+The main results can be found on the following table.
+
