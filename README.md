@@ -4,3 +4,4 @@ This repository contains the code and datasets for the paper "CDE-Periormer: CDE
 
 We design CDE-Periormer structure to handle irregular sampling rate and periodic patterns. The overall architecture can be found on the following figure.
 
+![3 Architecture](https://user-images.githubusercontent.com/98369049/197794496-395db772-0912-48f8-b2d8-b5366ca221e0.jpg)
