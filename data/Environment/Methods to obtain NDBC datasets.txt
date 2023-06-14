@@ -1,0 +1,20 @@
+1. Try NDBC PACKAGE in Python
+https://pypi.org/project/NDBC/
+However, we can only obtain data with the same sampling rate.
+
+2.Try ftp server. NDBC data directory
+https://www.ndbc.noaa.gov/data/
+
+3.Download historical data
+You can check all of the stations by scrolling down: https://www.ndbc.noaa.gov/widgets/
+Also, you can view all of the historical values by https://www.ndbc.noaa.gov/historical_data.shtml
+
+https://www.ndbc.noaa.gov/station_history.php?station=41053
+Change the station number,then you can download.
+
+16.Ship Observations:
+https://www.ndbc.noaa.gov/ship_obs.php?uom=M&time=5
+
+14.15.17 Not good
+
+Provide the ship observations of the past 5h or 12h.
