@@ -29,4 +29,4 @@ the number of layers is set to 3. The embedding size is set to 1024 in [Reformer
 
 # Reproductability:
 
-For reproductability, please refer to "Results" folder for detailed results.
+For reproductability, please refer to [Results](https://github.com/xren451/CDE-Periormer/blob/main/Results) folder.
