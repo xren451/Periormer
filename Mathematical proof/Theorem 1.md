@@ -6,8 +6,8 @@ Following Discrete Fourier Transform (DFT) on the discrete signal,
 $$X[k] = \sum_{n=0}^{N-1} x[n] \cdot e^{-j\frac{2\pi}{N}kn}$$
 
 where $N$ is the number of terms and $k$ is the frequency index. We introduce 
-$$R^2 = 1 - \frac{SSR}{SST}$$, as SSR represents the the residual sum of squares and SST represents the total sum of squares. SST is the constant and SSR 
-is determined by term $$N$$ in the Fourier transform, therefore, $$R^{2} \propto N$$.
+$R^2 = 1 - \frac{SSR}{SST}$, as SSR represents the the residual sum of squares and SST represents the total sum of squares. SST is the constant and SSR 
+is determined by term $N$ in the Fourier transform, therefore, $R^{2} \propto N$.
 
 We can get   
 $$
