@@ -12,7 +12,7 @@ is determined by term $N$ in the Fourier transform, therefore, $R^{2} \propto N$
 We can get   
 $$X^{\text{h}}[k] = \sum_{n=0}^{N-1} X^{\text{high}}[n] \cdot e^{-j\frac{2\pi}{N}kn}$$ and 
 $$X^{l}[k] = \sum_{n=0}^{N-1} X^{l}[n] \cdot e^{-j\frac{2\pi}{N}kn}$$
-4. According to Cauchy-Schwarz inequality， 
+According to Cauchy-Schwarz inequality， 
 
 $$|X^{l}[k]| \leq \sqrt{\sum_{n=0}^{N-1} |X^{l}[n]|^2} \cdot \sqrt{\sum_{n=0}^{N-1} |e^{-j\frac{2\pi}{N}kn}|^2}$$
 
