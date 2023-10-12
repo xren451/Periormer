@@ -23,6 +23,6 @@ $$|X^{l}[k]| \leq M \cdot \sqrt{\sum_{n=0}^{N-1} |e^{-j\frac{2\pi}{N}kn}|^2}$$
 
 Notice that $|e^{-j\frac{2\pi}{N}kn}|^2$ is the square of a sine function. This integral can be bounded by a constant less than 1, i.e., $|e^{-j\frac{2\pi}{N}kn}|^2 \leq 1$.
 
-Therefore, $$|X^{l}[k]| \leq M \cdot \sqrt{\sum_{n=0}^{N-1} 1}$$
+Therefore, as $R^{2} \propto N$, we can obtain: $$|X^{l}[k]| \leq M \cdot \sqrt{\sum_{n=0}^{N-1} 1}$$
 
-$$|X^{l}[k]| \leq M \cdot \sqrt{N}$$, as $R^{2} \propto N$, $$|X^{l}[k]| \leq M \cdot R^{2}$$.
+$$|X^{l}[k]| \leq M \cdot \sqrt{N}$$,  $$|X^{l}[k]| \leq M \cdot R^{2}$$.
