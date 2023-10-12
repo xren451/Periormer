@@ -1,5 +1,6 @@
-\textbf{Theorem 1} 
-$|\mathcal{X}-\mathcal{X}^{\mathrm{high}}| \leq M* R^{2}$, giving $N \propto R^{2}$.
+Theorem 1:
+
+$$|\mathcal{X}-\mathcal{X}^{\mathrm{high}}| \leq M* R^{2}$, giving $N \propto R^{2}$$.
 \textbf{Proof:}
 
 Following Discrete Fourier Transform (DFT) on the discrete signal,
