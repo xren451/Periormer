@@ -25,4 +25,4 @@ Notice that $|e^{-j\frac{2\pi}{N}kn}|^2$ is the square of a sine function. This 
 
 Therefore, as $R^{2} \propto N$, we can obtain: $$|X^{l}[k]| \leq M \cdot \sqrt{\sum_{n=0}^{N-1} 1}$$
 
-$$|X^{l}[k]| \leq M \cdot \sqrt{N}$$,  $$|X^{l}[k]| \leq M \cdot R^{2}$$.
+$$|X^{l}[k]| \leq M \cdot \sqrt{N}$$,  $$|X^{l}[k]| \leq M \cdot \sqrt{R^{2}}$$.
