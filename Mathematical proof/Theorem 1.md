@@ -1,4 +1,4 @@
-Theorem 1: $$|\mathcal{X}-\mathcal{X}^{\mathrm{h}}| \leq M* \sqrt(R^{2}), giving N \propto R^{2}$$.
+Theorem 1: $$|\mathcal{X}-\mathcal{X}^{\mathrm{h}}| \leq M* \sqrt{R^{2}}, giving N \propto R^{2}$$.
 
 Proof:
 
