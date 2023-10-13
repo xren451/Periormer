@@ -10,7 +10,7 @@ $R^2 = 1 - \frac{SSR}{SST}$, as SSR represents the the residual sum of squares a
 is determined by term $N$ in the Fourier transform, therefore, $R^{2} \propto N$.
 
 We can get   
-$$X^{\text{h}}[k] = \sum_{n=0}^{N-1} X^{\text{high}}[n] \cdot e^{-j\frac{2\pi}{N}kn}$$ and 
+$$X^{\text{h}}[k] = \sum_{n=0}^{N-1} X^{\text{h}}[n] \cdot e^{-j\frac{2\pi}{N}kn}$$ and 
 $$X^{l}[k] = \sum_{n=0}^{N-1} X^{l}[n] \cdot e^{-j\frac{2\pi}{N}kn}$$
 According to Cauchy-Schwarz inequality， 
 
