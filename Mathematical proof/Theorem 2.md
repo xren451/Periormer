@@ -26,4 +26,10 @@ $$0 \leq Var(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)
 and
 $$0 \leq E(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)))) \leq \frac{L_{n}}{1-0}\int_{0}^{1} A\sin(\omega t) dt$$
 
-giving $L_{n}$ as the number of terms which cannot be divided by the largest period L.
+where LCM(Period(1,2,...L)) represents the LCM giving all of the periodic terms (1,2,...L), $L_{n}$ represents the number of terms which cannot be divided by the largest period L.
+
+Theorem 2 denotes the estimated expectation and variance following by $L_{period}$ compared to LCM. Under this theorem, we can calculate the information loss.
+
+Proof.
+To prove the lower bound. 
+
