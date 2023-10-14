@@ -20,3 +20,9 @@ $$p(x)=\frac{1}{\sqrt{2\pi}\sigma}\sum_{k=-\infty}^{\infty}\exp\left(-\frac{(x-A
 
 For multiple sins functions on the $i_{th}$ signal, the mixture PDF will be:
 $$f(x) = \sum_{i=1}^{N} \frac{p(x,i)}{N} $$
+
+Theorem 2：
+$$0 \leq Var(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)))) \leq \frac{L_{n}}{1-0}\int_{0}^{1} \left[A\sin(\omega t) - \frac{A}{\omega}(1 - \cos(\omega))\right]^2 \, dt$$
+$$0 \leq E(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)))) \leq \frac{L_{n}}{1-0}\int_{0}^{1} A\sin(\omega t) \, dt
+
+giving $L_{n}$ as the number of terms which cannot be divided by the largest period L.
