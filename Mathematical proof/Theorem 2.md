@@ -19,5 +19,5 @@ For the whole time points $(-\infty,\infty)$, the periodic signals can appear in
 $$p(x)=\frac{1}{\sqrt{2\pi}\sigma}\sum_{k=-\infty}^{\infty}\exp\left(-\frac{(x-A\sin(\omega t_k))^{2}}{2\sigma ^{2}}\right)$$
 
 For multiple sins functions, the mixture PDF will be:
-$$f(x) = \sum_{i=1}^{N} \frac{p_{x,i}}{N} $$
+$$f(x) = \sum_{i=1}^{N} \frac{p(x,i)}{N} $$
 Where $k_{i}$ represents the weight coefficient of the $i_{th}$ signal.
