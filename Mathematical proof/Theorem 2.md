@@ -37,13 +37,13 @@ Due to the linear characteristics of the expectations , we get:
 
  $$E[x(t)]=E\left[x_1(t)+x_2(t)\right]$$
  
-$Var[x(t)]=\operatorname{Var}\left[x_1(t)+x_2(t)\right]=\operatorname{Var}\left[x_1(t)\right]+\operatorname{Var}\left[x_2(t)\right]=\frac{A^2}{2}+\frac{B^2}{2}=$ $\frac{A^2+B^2}{2}$
+$$Var[x(t)]=\operatorname{Var}\left[x_1(t)+x_2(t)\right]=\operatorname{Var}\left[x_1(t)\right]+\operatorname{Var}\left[x_2(t)\right]=\frac{A^2}{2}+\frac{B^2}{2}=\frac{A^2+B^2}{2}$$
 
 If all of the terms $N$ can be divided by Period (L), then  $ 0 \leq E(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)))) $ as all periodic functions are shown without any information loss. Then the expectations of \mathcal{X}^{h}(0,Period(L)) and \mathcal{X}^{h}(0,LCM(Period(1,2,...L)) will be zero.
 
 Similarly, due to the linear characteristics of variance, we get:
 
-$Var[x(t)]=\operatorname{Var}\left[x_1(t)+x_2(t)\right]=\operatorname{Var}\left[x_1(t)\right]+\operatorname{Var}\left[x_2(t)\right]=\frac{A^2}{2}+\frac{B^2}{2}=$ $\frac{A^2+B^2}{2}$
+$$Var[x(t)]=\operatorname{Var}\left[x_1(t)+x_2(t)\right]=\operatorname{Var}\left[x_1(t)\right]+\operatorname{Var}\left[x_2(t)\right]=\frac{A^2}{2}+\frac{B^2}{2}=\frac{A^2+B^2}{2}$$
 
 Then the variance of \mathcal{X}^{h}(0,Period(L)) and \mathcal{X}^{h}(0,LCM(Period(1,2,...L)) will be the same. The lower bound is proved.
 
