@@ -16,5 +16,5 @@ Therefore, the PDF in the period will be:
 $$p(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{x^{2}}{2\sigma^{2}}\right)$$, where $\sigma^{2}=\frac{A^{2}}{2}$.
 
 For the whole time points $(-\infty,\infty)$, the periodic signals can appear in any range. Therefore, the PDF in the whole time range will be:
-$$p(x)=\frac{1}{\sqrt{2\pi}\sigma}\sum_{k=-\infty}^{\infty}\exp\left(-\frac{x-A\sin(\omega t_k)^{2}}{2\sigma ^{2}}\right)$$
+$$p(x)=\frac{1}{\sqrt{2\pi}\sigma}\sum_{k=-\infty}^{\infty}\exp\left(-\frac{(x-A\sin(\omega t_k))^{2}}{2\sigma ^{2}}\right)$$
 
