@@ -1,5 +1,17 @@
 The PDF of Sins signal:
 
+Theorem 2：
+$$0 \leq Var(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)))) \leq \frac{L_{n}}{1-0}\int_{0}^{1} \left[A\sin(\omega t) - \frac{A}{\omega}(1 - \cos(\omega))\right]^2 dt$$
+and
+$$0 \leq E(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)))) \leq \frac{L_{n}}{1-0}\int_{0}^{1} A\sin(\omega t) dt$$
+
+where LCM(Period(1,2,...L)) represents the LCM giving all of the periodic terms (1,2,...L), $L_{n}$ represents the number of terms which cannot be divided by the largest period L.
+
+Theorem 2 denotes the estimated expectation and variance following by $L_{period}$ compared to LCM. Under this theorem, we can calculate the information loss.
+
+Proof.
+To prove the lower bound. 
+
 Due to sins signal is a periodic signal, we should firstly calculate the probability density function(PDF). Assume the period of the sins function is $T$.
 As we know:
 
@@ -21,15 +33,37 @@ $$p(x)=\frac{1}{\sqrt{2\pi}\sigma}\sum_{k=-\infty}^{\infty}\exp\left(-\frac{(x-A
 For multiple sins functions on the $i_{th}$ signal, the mixture PDF will be:
 $$f(x) = \sum_{i=1}^{N} \frac{p(x,i)}{N} $$
 
-Theorem 2：
-$$0 \leq Var(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)))) \leq \frac{L_{n}}{1-0}\int_{0}^{1} \left[A\sin(\omega t) - \frac{A}{\omega}(1 - \cos(\omega))\right]^2 dt$$
-and
-$$0 \leq E(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)))) \leq \frac{L_{n}}{1-0}\int_{0}^{1} A\sin(\omega t) dt$$
+Due to the linear characteristics of the expectations , we get:
 
-where LCM(Period(1,2,...L)) represents the LCM giving all of the periodic terms (1,2,...L), $L_{n}$ represents the number of terms which cannot be divided by the largest period L.
+ $$E[x(t)]=E\left[x_1(t)+x_2(t)\right]$$
+ 
+$\operatorname{Var}[x(t)]=\operatorname{Var}\left[x_1(t)+x_2(t)\right]=\operatorname{Var}\left[x_1(t)\right]+\operatorname{Var}\left[x_2(t)\right]=\frac{A^2}{2}+\frac{B^2}{2}=$ $\frac{A^2+B^2}{2}$
 
-Theorem 2 denotes the estimated expectation and variance following by $L_{period}$ compared to LCM. Under this theorem, we can calculate the information loss.
+If all of the terms $N$ can be divided by Period (L), then  $ 0 \leq E(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)))) $ as all periodic functions are shown without any information loss. Then the expectations of \mathcal{X}^{h}(0,Period(L)) and \mathcal{X}^{h}(0,LCM(Period(1,2,...L)) will be zero.
 
-Proof.
-To prove the lower bound. 
+Similarly, due to the linear characteristics of variance, we get:
+
+$\operatorname{Var}[x(t)]=\operatorname{Var}\left[x_1(t)+x_2(t)\right]=\operatorname{Var}\left[x_1(t)\right]+\operatorname{Var}\left[x_2(t)\right]=\frac{A^2}{2}+\frac{B^2}{2}=$ $\frac{A^2+B^2}{2}$
+
+Then the variance of \mathcal{X}^{h}(0,Period(L)) and \mathcal{X}^{h}(0,LCM(Period(1,2,...L)) will be the same. The lower bound is proved.
+
+To prove the upper bound.
+
+The worst case will be there will be L_{n} terms which can not be divided by L_{period}, and there will be at most 1 period for every terms.
+Therefore, we only need to calculate the information loss in one period of each periodic term.
+
+To achieve this, we calculate the average value of sins function $A \sin (\omega t)$ in the range $[0,1]$ as:
+$$E=\frac{1}{1-0} \int_0^1 A \sin (\omega t) d t $$
+ where $A$ and $\omega$ are constant, then we can get
+$$E=\frac{A}{\omega}[-\cos (\omega \cdot 1)+\cos (\omega \cdot 0)]$$.
+Due to $\cos (0)=1$ and $\cos (\omega)$ are determined by $\omega$, then $E$ :
+$$E=\frac{A}{\omega}(1-\cos (\omega))$$
+
+To calculate the variance of sins function $A \sin (\omega t)$ in the range $[0,1]$, we get:
+$$\sigma^2=\frac{1}{1-0} \int_0^1[A \sin (\omega t)-\mu]^2 d t$$
+We can also get:
+$$\sigma^2=\frac{1}{1-0} \int_0^1\left[A \sin (\omega t)-\frac{A}{\omega}(1-\cos (\omega))\right]^2 d t$$
+
+If all $L_{n}$ terms lack one period, then we can obtain information loss by multiplying $L_{n}$.
+Then upper bound is proved.
 
