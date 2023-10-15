@@ -7,10 +7,14 @@ We design Periormer structure to handle irregular sampling rate and periodic pat
 ![1 Architecture](https://github.com/xren451/CDE-Periormer/blob/main/img/Arch.png)
 
 Also, the periodic attention is shown in the following figure.
-![2 periatt](https://github.com/xren451/CDE-Periormer/blob/main/img/periodic%20att.png)
+![2 att comp](https://github.com/xren451/Periormer/blob/main/img/att%20comparasion.png)
+
+![2 att exam](https://github.com/xren451/Periormer/blob/main/img/Attention%20example.png)
+
+![2 att exam](https://github.com/xren451/Periormer/blob/main/img/Cross%20feature%20att.png)
 
 The main results can be found on the following table.
-![3 periatt](https://github.com/xren451/CDE-Periormer/blob/main/img/Multivariate%20and%20univariate%20time%20series%20prediction%20on%20eight%20datasets.png)
+![3 Results](https://github.com/xren451/CDE-Periormer/blob/main/img/Multivariate%20and%20univariate%20time%20series%20prediction%20on%20eight%20datasets.png)
 
 # Dataset:
 For WTH, ETTh1, ETTm1 and ETTm2, please refer to [here](https://github.com/zhouhaoyi/Informer2020) for detailed illustration.
