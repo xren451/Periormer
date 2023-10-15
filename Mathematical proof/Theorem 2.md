@@ -2,8 +2,8 @@ Theorem 2：
 $$0 \leq E\left [\mathcal{X}^h(1,L_{max}) - \mathcal{X}^h(1, L_{lcm})\right] \leq  \sum_{i=1}^{L_{n}} \int_0^1 A_{i} \sin (\omega_{i} t) dt$$
 
 \begin{align*}
-0 \leq &\operatorname{Var}\left[\mathcal{X}^h(1,L_{max}) - \mathcal{X}^h(1, L_{lcm})\right] \\ 
-& \leq  \sum _{i=1}^{L_{n}} \int_0^1\left[A_{i} \sin (\omega_{i} t)-\frac{A_{i}}{\omega_{i}}(1-\cos (\omega_{i}))\right]^2 d t,
+0 \leq &Var\left[\mathcal{X}^h(1,L_{max}) - \mathcal{X}^h(1, L_{lcm})\right] \\ 
+& \leq  \sum \sum_{i=1}^{L_{n}} \int_0^1\left[A_{i} \sin (\omega_{i} t)-\frac{A_{i}}{\omega_{i}}(1-\cos (\omega_{i}))\right]^2 d t,
 \end{align*}
 %
 where $A_{i}$ and $\omega_{i}$ are the amplitude and phase of $i$-th periodic signal and $L_{n}$ represents the number of terms that cannot divide the largest period $L_{max}$. 
