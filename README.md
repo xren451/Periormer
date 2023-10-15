@@ -4,7 +4,7 @@ This repository contains the code and datasets for the paper "CDE-Periormer: CDE
 
 We design CDE-Periormer structure to handle irregular sampling rate and periodic patterns. The overall architecture can be found on the following figure.
 
-![1 Architecture](https://github.com/xren451/CDE-Periormer/blob/main/img/Arch.png)
+![1 Architecture](https://github.com/xren451/CDE-Periormer/blob/main/img/Arch.pdf)
 
 Also, the periodic attention is shown in the following figure.
 ![2 periatt](https://github.com/xren451/CDE-Periormer/blob/main/img/periodic%20att.png)
