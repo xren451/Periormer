@@ -12,7 +12,7 @@ Also, the periodic attention is shown in the following figure.
 ![2 att exam](https://github.com/xren451/Periormer/blob/main/img/Cross%20feature%20att.png)
 
 The main results can be found on the following table.
-![3 Results](https://github.com/xren451/CDE-Periormer/blob/main/img/Multivariate%20and%20univariate%20time%20series%20prediction%20on%20eight%20datasets.png)
+![3 Results](https://github.com/xren451/Periormer/blob/main/img/Main%20results.png)
 
 # Dataset:
 For WTH, ETTh1, ETTm1 and ETTm2, please refer to [here](https://github.com/zhouhaoyi/Informer2020) for detailed illustration.
