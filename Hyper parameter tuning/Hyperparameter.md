@@ -1,5 +1,5 @@
 For all methods, the input length is chosen from {24, 48, 96, 192, 336} for all datasets, the batch size is set to 32, and the learning rate in Adam optimizer is set to $10^{-4}$. For all datasets, we split the training, validation, and test set by the ratio of 6:2:2. We set the hyper-parameters for all baselines to the best values achieved in the validation set. We use grid search for all methods in the hyperparameter tuning. 
-The $R^{2}$ is choosen from {60\%,70\%,80\%,90\%}, the head number of multi-head attention is chosen from {8,16}, the dimension of the output of multi-head attention is chosen as ${256, 512}$. 
+The $R^{2}$ is choosen from {60\%,70\%,80\%,90\%}, the head number of multi-head attention is chosen from {8,16}, the dimension of the output of multi-head attention is chosen as {256, 512}. 
 
 For FEDformer, we set the mode $M$ in the decomposition block to 64, the number of orthogonal basis $k$ is set to 3, the fixed kernel size in the average pooling layer is set to 24.
 
