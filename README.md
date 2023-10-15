@@ -9,8 +9,6 @@ We design Periormer structure to handle irregular sampling rate and periodic pat
 Also, the periodic attention is shown in the following figure.
 ![2 att comp](https://github.com/xren451/Periormer/blob/main/img/att%20comparasion.png)
 
-![2 att exam](https://github.com/xren451/Periormer/blob/main/img/Attention%20example.png)
-
 ![2 att exam](https://github.com/xren451/Periormer/blob/main/img/Cross%20feature%20att.png)
 
 The main results can be found on the following table.
