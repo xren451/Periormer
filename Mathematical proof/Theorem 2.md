@@ -1,5 +1,3 @@
-The PDF of Sins signal:
-
 Theorem 2：
 $$0 \leq Var(\mathcal{X}^{h}(0,Period(L)),\mathcal{X}^{h}(0,LCM(Period(1,2,...L)))) \leq \frac{L_{n}}{1-0}\int_{0}^{1} \left[A\sin(\omega t) - \frac{A}{\omega}(1 - \cos(\omega))\right]^2 dt$$
 and
