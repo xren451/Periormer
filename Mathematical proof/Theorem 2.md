@@ -1,6 +1,5 @@
 Theorem 2：
-$$0 \leq E\left [\mathcal{X}^h(1,L_{max}) - \mathcal{X}^h(1, L_{lcm})\right] \leq  \sum _{i=1}^{L_{n}} \int_0^1 A_{i} \sin (\omega_{i} t) d t
-$$
+$$0 \leq E\left [\mathcal{X}^h(1,L_{max}) - \mathcal{X}^h(1, L_{lcm})\right] \leq  \sum _{i=1}^{L_{n}} \int_0^1 A_{i} \sin (\omega_{i} t) dt$$
 
 \begin{align*}
 0 \leq &\operatorname{Var}\left[\mathcal{X}^h(1,L_{max}) - \mathcal{X}^h(1, L_{lcm})\right] \\ 
