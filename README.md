@@ -7,16 +7,16 @@ We design Periormer structure to handle irregular sampling rate and periodic pat
 ![1 Architecture](/img/Arch.png)
 
 Also, the periodic attention is shown in the following figure.
-![2 att comp](https://github.com/xren451/Periormer/blob/main/img/att%20comparasion.png)
+![2 att comp](/img/att%20comparasion.png)
 
-![2 att exam](https://github.com/xren451/Periormer/blob/main/img/Cross%20feature%20att.png)
+![2 att exam](img/Cross%20feature%20att.png)
 
 The main results can be found on the following table.
-![3 Results](https://github.com/xren451/Periormer/blob/main/img/Main%20results.png)
+![3 Results](img/Main%20results.png)
 
 # Dataset:
 For WTH, ETTh1, ETTm1 and ETTm2, please refer to [here](https://github.com/zhouhaoyi/Informer2020) for detailed illustration.
-For NDBC, please refer to [here](https://github.com/xren451/CDE-Periormer/blob/main/data/Environment/Methods%20to%20obtain%20NDBC%20datasets.txt) and [here] (https://github.com/xren451/CDE-Periormer/blob/main/data/Environment/ndbc_web_data_guide%20(1).pdf) for detailed data retrieving method. Please use [here](https://github.com/xren451/CDE-Periormer/blob/main/data/Environment/read_NDBC.ipynb) for a easy way to obtain the NDBC dataset.
+For NDBC, please refer to [here](data/Environment/Methods%20to%20obtain%20NDBC%20datasets.txt) and [here] (https://github.com/xren451/CDE-Periormer/blob/main/data/Environment/ndbc_web_data_guide%20(1).pdf) for detailed data retrieving method. Please use [here](data/Environment/read_NDBC.ipynb) for a easy way to obtain the NDBC dataset.
 For stock1 and stock2, please refer to [here](https://github.com/microsoft/qlib/tree/main/scripts/data_collector/yahoo) to obtain the dataset.
 
 # Running the experiment:
@@ -31,4 +31,4 @@ the number of layers is set to 3. The embedding size is set to 1024 in [Reformer
 
 # Reproductability:
 
-For reproductability, please refer to [Results](https://github.com/xren451/CDE-Periormer/blob/main/Results) folder.
+For reproductability, please refer to [Results](/Results) folder.
