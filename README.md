@@ -4,7 +4,7 @@ This repository contains the code and datasets for the paper "Periormer: Periodi
 
 We design Periormer structure to handle irregular sampling rate and periodic patterns. The overall architecture can be found on the following figure.
 
-![1 Architecture](https://github.com/xren451/CDE-Periormer/blob/main/img/Arch.png)
+![1 Architecture](/img/Arch.png)
 
 Also, the periodic attention is shown in the following figure.
 ![2 att comp](https://github.com/xren451/Periormer/blob/main/img/att%20comparasion.png)
