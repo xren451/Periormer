@@ -6,13 +6,10 @@ We design Periormer structure to handle irregular sampling rate and periodic pat
 
 ![1 Architecture](Arch.png)
 
-Also, the periodic attention is shown in the following figure.
+Also, the periodic attention and main results are shown in the following figure.
 ![2 att comp](att%20comparasion.png)
 
 ![2 att exam](img/Cross%20feature%20att.png)
-
-The main results can be found on the following table.
-
 
 ![3 Results](img/Main%20results.png)
 
