@@ -1,5 +1,123 @@
 import torch
 
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+
+class CrossFeatureAttention(nn.Module):
+
+# # The cross feature attention ---->>> Input: 3-D tensor(Timesteps,d_model,d);Output:2D tensor--->(Timesteps, d_model)
+# Define input dimensions
+# Lx = 10  # Number of timesteps
+# d_model = 4  # Hidden dimension
+# d = 20  # Feature dimension
+#
+# # Generate example input data
+# x = torch.randn(Lx, d_model, d)
+#
+# # Initialize CrossFeatureAttention layer
+# cross_attention = CrossFeatureAttention(d_model, d)
+#
+# # Forward pass
+# output = cross_attention(x)
+# print("Output shape:", output.shape)
+    def __init__(self, d_model, d):
+        super(CrossFeatureAttention, self).__init__()
+        self.d_model = d_model
+        self.d = d
+
+        # MLP layers
+        self.mlp = nn.ModuleList([nn.Linear(d, 1) for _ in range(d_model)])
+
+        # Linear transformation for Q, K, and V
+        self.linear_q = nn.Linear(d_model, d_model)
+        self.linear_k = nn.Linear(d_model, d_model)
+        self.linear_v = nn.Linear(d_model, d_model)
+
+        # Attention mechanism
+        self.attention = nn.MultiheadAttention(d_model, num_heads=1)
+
+    def forward(self, x):
+        # Step 1: Alternative Concatenation
+        concat_outputs = []
+        for i in range(self.d_model):
+            concat_output = torch.cat([x[..., j] for j in range(0, self.d, self.d_model)], dim=-1)
+            concat_outputs.append(concat_output)
+
+        # Step 2: MLP for each matrix
+        mlp_outputs = [F.relu(mlp(concat_output)) for concat_output, mlp in zip(concat_outputs, self.mlp)]
+
+        # Step 3: Concatenate outputs
+        concat_output = torch.cat(mlp_outputs, dim=-1)
+
+        # Step 4: Linear transformation for Q, K, and V
+        q = self.linear_q(concat_output)
+        k = self.linear_k(concat_output)
+        v = self.linear_v(concat_output)
+
+        # Apply attention mechanism
+        attn_output, _ = self.attention(q, k, v)
+
+        return attn_output
+
+
+#
+#
+
+
+def Decomp_block(raw_series, threshold):  # Default threshold=0.8:
+
+    ###############Input: 1D array or pd.dataframe, plus the threshold (default=0.8)
+    ###############Output: 1D array of periodic signals and other signals respectively
+    import pandas as pd
+    import numpy as np
+    import torch
+    from sklearn.metrics import r2_score
+    from sklearn.metrics import r2_score
+    from statsmodels.tsa.seasonal import STL
+    raw_series = pd.Series(
+        raw_series, index=pd.date_range("1-1-1959", periods=len(raw_series), freq="M"), name="CO2"
+    )
+    stl = STL(raw_series, seasonal=5)
+    res = stl.fit()
+    trend = res.trend
+    residual_sig = res.resid
+    period_all = raw_series - trend
+    # Initialize variables
+    # threshold = 0.8 # R-squared threshold
+    max_components = len(period_all) // 2  # Number of components in FFT result
+
+    # Apply FFT decomposition
+    fft_result = np.fft.fft(period_all)
+
+    # Get indices sorted by amplitude in descending order
+    sorted_indices = np.argsort(np.abs(fft_result))[::-1]
+
+    # Loop over FFT components in descending order of amplitude
+    for num_components in range(1, max_components + 1):
+        # Initialize an array to store the selected components
+        selected_fft_result = np.zeros_like(fft_result)
+
+        # Select the top num_components components based on amplitude
+        selected_fft_result[sorted_indices[:num_components]] = fft_result[sorted_indices[:num_components]]
+
+        # Reconstruct time series by applying inverse FFT
+        reconstructed_series = np.fft.ifft(selected_fft_result).real
+
+        # Calculate R-squared between period_all and reconstructed_series
+        r_squared = r2_score(period_all, reconstructed_series)
+        print("r_squared", r_squared)
+        # Check if R-squared meets the threshold
+        if r_squared >= threshold:
+            print(f"Selected {num_components} components with R-squared: {r_squared:.2f}")
+            break
+    else:
+        print("R-squared threshold not met. Consider increasing the threshold or using more components.")
+    return reconstructed_series, res.resid + res.trend
+
+
+
 def fftTransfer1(timeseries, per_term, fmin=0.2):
     import pandas as pd
     import numpy as np
@@ -41,7 +159,8 @@ def fftTransfer1(timeseries, per_term, fmin=0.2):
     a[:,0]=y#Get amplitude
     a[:,1]=x#Get Periodic terms
     df=pd.DataFrame(a)
-    df.set_axis(["amp","period"],axis=1,inplace=True)
+    #df.set_axis(["amp","period"],axis=1,inplace=True)
+    df = df.rename(columns={0: "amp", 1: "period"})
     # sorting data frame by name
     df.sort_values("amp", axis = 0, ascending = False,
                  inplace = True, na_position ='last')

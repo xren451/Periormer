@@ -147,7 +147,7 @@ class PeriorProbAttention(nn.Module):
         ##2023.3.31--->Afternoon
         Q_K_sample = torch.matmul(Q.unsqueeze(-2),  K_sample_amp_K.transpose(-2, -1)).squeeze(-2)##shape: [32,8,96,16]
 #Q.unqueeze(32,8,96,1,64);K_sample.transpose(-2,-1).shape;
-        #Do Attention---->The number of Q:96 K:25.
+        #Do Attention----
 
         # find the Top_k query with sparsity measurement
         M = Q_K_sample.max(-1)[0] - torch.div(Q_K_sample.sum(-1), L_K)#[32,8,96]

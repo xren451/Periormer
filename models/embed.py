@@ -57,7 +57,7 @@ class FixedEmbedding(nn.Module):
         return self.emb(x).detach()
 
 class PeriodicEmbedding(nn.Module):
-    ####Periodic embedding,Periodic Amplitude Embedding (PAE) and Interval Embedding (IE)
+    ####Periodic embedding,Periodic Amplitude Embedding (PAE)
     # --->summation of all periodic terms for all variables.
 
     #Mimicry positional embedding rather than fixed embedding.
