@@ -15,7 +15,7 @@ Also, the periodic attention and main results are shown in the following figure.
 
 # Dataset:
 For WTH, ETTh1, please refer to [here](https://github.com/zhouhaoyi/Informer2020) for detailed illustration.
-For NDBC, please refer to [here](data/Environment/Methods%20to%20obtain%20NDBC%20datasets.txt) and [here] (https://github.com/xren451/CDE-Periormer/blob/main/data/Environment/ndbc_web_data_guide%20(1).pdf) for detailed data retrieving method. Please use [here](data/Environment/read_NDBC.ipynb) for a easy way to obtain the NDBC dataset.
+For NDBC, please refer to [here](data/Environment/Methods%20to%20obtain%20NDBC%20datasets.txt) and [here](https://github.com/xren451/CDE-Periormer/blob/main/data/Environment/ndbc_web_data_guide%20(1).pdf) for detailed data retrieving method. Please use [here](data/Environment/read_NDBC.ipynb) for a easy way to obtain the NDBC dataset.
 For stock, please refer to [here](https://github.com/microsoft/qlib/tree/main/scripts/data_collector/yahoo) to obtain the dataset.
 
 # Running the experiment:
